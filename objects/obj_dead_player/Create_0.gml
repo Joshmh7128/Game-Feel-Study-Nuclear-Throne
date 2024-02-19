@@ -1,3 +1,6 @@
+height = 480
+width = 640
+
 speed = 5
 // stop all audio
 audio_stop_all()

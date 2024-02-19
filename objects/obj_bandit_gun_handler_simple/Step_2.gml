@@ -20,4 +20,5 @@ if (counter <= 0)
 	ourshot.direction = point_direction(x,y, global.player_x, global.player_y);
 	// play a sound
 	audio_play_sound(shot_die, 99, false, 1, 0, random_range(0.9, 1.2));
+	show_debug_message("shot");
 }
