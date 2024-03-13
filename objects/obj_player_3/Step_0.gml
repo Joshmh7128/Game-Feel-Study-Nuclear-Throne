@@ -17,11 +17,9 @@ if (knockbacktime == 0)
 	// our movement cannot be 0 if we're dashing!
 	if (is_dashing)
 	{
-		
 		_move_x = last_move_x;
 		_move_y = last_move_y;
 	}
-		
 		
 	last_move_x = _move_x;
 	last_move_y = _move_y;
@@ -31,7 +29,7 @@ if (knockbacktime == 0)
 	_move_y *= c_dash_multiplier;
 }
 	
-if (keyboard_check_pressed(vk_space))
+if (keyboard_check_pressed(vk_space) && !is_dashing)
 {
 	is_dashing = true;
 	alarm_set(0, 45);
@@ -52,7 +50,6 @@ if (is_dashing)
 	}
 }
 	
-
 if (!is_dashing)
 {
 	// set the multiplier
