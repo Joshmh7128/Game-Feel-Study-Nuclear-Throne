@@ -25,20 +25,22 @@ if (check_free(_move_x + knock_move_x, _move_y + knock_move_y))
 // reduce our knockback time
 if (knockbacktime > 0)
 	knockbacktime--;
-else 
+
 	knockbacktime = 0;
 	
 // slow our knockback x movements
 if (knock_move_x > 0)
 	knock_move_x -= 0.1;
-else 
-	knock_move_x = 0;
+	
+if (knock_move_x < 0)
+	knock_move_x += 0.1;
 	
 // slow our knockback y movements
 if (knock_move_y > 0)
 	knock_move_y -= 0.1;
-else 
-	knock_move_y = 0;
+
+if (knock_move_y < 0)
+	knock_move_y += 0.1;
 	
 	
 // set our position
