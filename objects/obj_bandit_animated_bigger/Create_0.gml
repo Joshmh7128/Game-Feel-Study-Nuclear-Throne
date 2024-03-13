@@ -28,3 +28,5 @@ if (has_shadow)
 	ourshadow.follow_object = self;
 	ourshadow.follow_offset = 4;
 }
+
+alarm_set(0, random_range(60, 300));

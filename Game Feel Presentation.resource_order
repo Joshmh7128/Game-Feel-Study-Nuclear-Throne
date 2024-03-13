@@ -1,5 +1,5 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Animation Curves","order":10,"path":"folders/Animation Curves.yy",},
     {"name":"Extensions","order":12,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":5,"path":"folders/Fonts.yy",},
@@ -15,7 +15,7 @@
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":6,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [
+  "ResourceOrderSettings":[
     {"name":"par_enemy","order":10,"path":"objects/par_enemy/par_enemy.yy",},
     {"name":"obj_bandit_gun_handler_basic","order":7,"path":"objects/obj_bandit_gun_handler_basic/obj_bandit_gun_handler_basic.yy",},
     {"name":"Room_3_LowerEnemyHP","order":2,"path":"rooms/Room_3_LowerEnemyHP/Room_3_LowerEnemyHP.yy",},

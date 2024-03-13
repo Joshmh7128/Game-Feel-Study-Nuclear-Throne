@@ -15,14 +15,11 @@ if (knockbacktime == 0)
 		_move_x = 1 * move_speed;
 }
 	
-if (check_free(_move_x, _move_y))
+if (check_free(_move_x + knock_move_x, _move_y + knock_move_y))
 {
 	// application of movement
-	x += _move_x;
-	y += _move_y;
-	// also add our knockback movement
-	x += knock_move_x;
-	y += knock_move_y;
+	x += _move_x + knock_move_x;
+	y += _move_y + knock_move_y;
 }
 
 // reduce our knockback time

@@ -25,8 +25,13 @@ if (counter <= 0)
 	
 		var ourshot = instance_create_depth(x+shotpos_x, y+shotpos_y,depth-1, obj_enemy_bullet_bigger);
 		ourshot.direction = point_direction(x,y, global.player_x, global.player_y);
-		// play a sound
-		audio_play_sound(shot_1, 99, false, 1, 0, random_range(0.9, 1.2));
+		
+		// play a sound based on distance
+		var _player_dist = distance_to_object(obj_player_3)
+		var _hearing_dist = _player_dist / max_hear_distance;
+		if (_hearing_dist > 1) _hearing_dist = 1;
+		
+		audio_play_sound(shot_1, 99, false, _hearing_dist, 0, random_range(0.9, 1.2));
 
 		if (does_flash)
 		{

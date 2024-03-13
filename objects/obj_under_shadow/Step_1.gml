@@ -1,3 +1,9 @@
+if (follow_object == undefined)
+{
+	instance_destroy(self);	
+}
+
+
 if (instance_exists(follow_id))
 {
 	try

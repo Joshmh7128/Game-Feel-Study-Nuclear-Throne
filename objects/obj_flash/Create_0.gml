@@ -6,3 +6,5 @@ if (instance_find(obj_cameraFX,0) && distance_to_point(global.player_x, global.p
 {
 	global.shaker.shaketime = 8;
 }
+
+max_hear_distance = 700;
