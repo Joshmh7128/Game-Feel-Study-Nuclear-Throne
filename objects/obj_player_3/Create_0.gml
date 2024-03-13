@@ -3,14 +3,26 @@ global.player_y = y
 
 // move speed
 move_speed = 1.5;
-move_x = 0;
-move_y = 0;
+dash_multiplier = 2;
+c_dash_multiplier = 1;
+_move_x = 0;
+_move_y = 0;
+last_move_x = 0;
+last_move_y = 0;
+
+// are we dashing?
+is_dashing = false;
+
+// dash draw rotation
+dash_draw_rot = 0;
+dash_draw_rot_rate = 30;
 
 // function to check if our place is free
 function check_free(_prop_x, _prop_y)
 {
 	return !place_meeting(x + _prop_x, y + _prop_y, par_wall);
 }
+
 
 sprite_index = player_idle_strip4;	
 
@@ -29,6 +41,8 @@ flashtime = 0;
 
 function get_hit(bullet_x, bullet_y)
 {
+	if (is_dashing) return;
+	
 	hp--;
 	
 	if (hp <= 0)
